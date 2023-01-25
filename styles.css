@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color-lightest: #f7dfda;
+  --primary-color-lighter: #efbeb5;
+  --primary-color-light: #e07f6b;
+  --primary-color: #ce3618;
+  --primary-color-dark: #ad2d14;
+  --primary-color-darker: #8c2510;
+  --primary-color-darkest: #4a1309;
+
+  --secondary-color-lightest: #e1e1e2;
+  --secondary-color-lighter: #c2c3c5;
+  --secondary-color-light: #86888b;
+  --secondary-color: #42454a;
+  --secondary-color-dark: #373a3e;
+  --secondary-color-darker: #2d2f32;
+  --secondary-color-darkest: #18191b;
+
+  --white: #fff;
+  --black: #000;
+
+  --success-color: #04cf7f;
+  --error-color: #cf2604;
+  --info-color: #04aecf;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Noto Sans", sans-serif;
+  color: var(--white);
+  background-color: var(--secondary-color);
+}
+
+.movie-container {
+  margin-block: 2.25rem;
+}
+
+.movie-container select {
+  font-size: 0.875rem;
+  border: 0;
+  border-radius: 0.25rem;
+  margin-left: 0.5rem;
+  padding: 0.25rem 2rem;
+  background-color: var(--white);
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.showcase .seat:not(.occupied):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.showcase {
+  background-color: var(--secondary-color-darker);
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.showcase li small {
+  margin-left: 0.125rem;
+}
+
+.container {
+  perspective: 60rem;
+  margin-bottom: 2rem;
+}
+
+.screen {
+  background-color: var(--white);
+  height: 5rem;
+  width: 100%;
+  margin-block: 1rem;
+  transform: rotateX(-45deg);
+  box-shadow: 0 0.25rem 0.75rem var(--white);
+}
+
+.row {
+  display: flex;
+}
+
+.seat {
+  background-color: var(--secondary-color-light);
+  height: 0.75rem;
+  width: 1rem;
+  margin: 0.25rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.seat.selected {
+  background-color: var(--info-color);
+}
+
+.seat.occupied {
+  background-color: var(--white);
+}
+
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.seat:nth-of-type(2) {
+  margin-right: 18px;
+}
+
+.seat:nth-last-of-type(2) {
+  margin-left: 18px;
+}
+
+.text span {
+  margin: 0.25rem;
+}
+
+.text span {
+  color: var(--info-color);
+}
